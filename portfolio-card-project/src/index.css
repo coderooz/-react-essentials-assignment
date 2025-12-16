@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* =========================
+   ROOT & BASE
+========================= */
+:root {
+  --cardBtn-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+  --btn-bg: #f1f5f9;
+  --btn-bg-hover: #2563eb;
+  --btn-text: #1f2937;
+  --btn-text-hover: #ffffff;
+  --btn-danger: #ef4444;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f4f6f8;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  width: 340px;
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--cardBtn-shadow);
+}
+
+.card.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* =========================
+   PROFILE
+========================= */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.title {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.card.dark .title {
+  color: #9ca3af;
+}
+
+.bio {
+  font-size: 14px;
+  margin: 14px 0;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chip_light {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.chip_dark {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* =========================
+   ACTION BAR
+========================= */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: all 0.2s ease;
+}
+
+.card.dark .cardBtn {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.cardBtn svg {
+  stroke-width: 2;
+}
+
+.cardBtn:hover {
+  background: var(--btn-bg-hover);
+  color: var(--btn-text-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--cardBtn-shadow);
+}
+
+.cardBtn.like svg {
+  stroke: var(--btn-danger);
+}
+
+.cardBtn.like:hover svg {
+  stroke: #ffffff;
+}
+
+.cardBtn.primary {
+  grid-column: span 2;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.cardBtn.primary:hover {
+  background: #1d4ed8;
 }

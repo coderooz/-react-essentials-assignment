@@ -1,13 +1,130 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-shell {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.movie-container {
+  background: white;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.search-bar button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.hint-text {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 10px 0;
+}
+
+.movie-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 12px;
+}
+
+.movie-info h4 {
+  margin: 0;
+}
+
+.movie-info span {
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.genre {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.rating {
+  background: #facc15;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.tag {
+  background: #e5e7eb;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.fav-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.fav-btn.active {
+  color: #16a34a;
+}
+
+.favourites-section {
+  margin-top: 30px;
+}
+
+.fav-item {
+  font-size: 14px;
+  margin-top: 6px;
 }
