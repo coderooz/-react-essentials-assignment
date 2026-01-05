@@ -3,6 +3,10 @@
 ## Description
 A React mini project demonstrating component structure, props, state management, event handling, and conditional rendering.
 
+## Deployment
+
+**Vercel** : [https://project-card-assignment.vercel.app/](https://project-card-assignment.vercel.app/)
+
 ## Features
 - Profile card UI
 - Dynamic skills via props
