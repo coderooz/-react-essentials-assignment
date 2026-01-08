@@ -10,4 +10,5 @@
 ### Details: 
 - **Name**: Movie Database Mini Application
 - **Description** : A React-based movie explorer application that demonstrates search functionality, dynamic filtering, conditional rendering, and favourite movie management.
-- **Deployed Link** : [https://vercel.com/coderooz-projects/react-essentials-assignment-7t2r](https://vercel.com/coderooz-projects/react-essentials-assignment-7t2r)
+- **Deployed Link** : [https://react-essentials-assignment-7t2r.vercel.app/](https://react-essentials-assignment-7t2r.vercel.app/)
+
