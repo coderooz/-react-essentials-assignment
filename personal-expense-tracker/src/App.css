@@ -1,0 +1,109 @@
+:root {
+  --primary: #6c5ce7;
+  --secondary: #a29bfe;
+  --bg: #dfe6e9;
+  --white: #ffffff;
+  --danger: #ff7675;
+  --text: #2d3436;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+/* Form */
+.expense-form, .expense-summary, .filter-container, .expense-list {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+button:hover { background-color: var(--secondary); }
+
+/* List */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.expense-info { display: flex; flex-direction: column; }
+.expense-date { font-size: 0.8rem; color: #888; }
+.expense-title { font-weight: bold; font-size: 1.1rem; }
+.expense-category-tag { 
+  font-size: 0.75rem; 
+  background: #eee; 
+  padding: 2px 6px; 
+  border-radius: 4px; 
+  width: fit-content; 
+  margin-top: 4px;
+}
+
+.expense-actions { display: flex; align-items: center; gap: 15px; }
+.expense-amount { font-weight: bold; color: var(--primary); }
+.delete-btn { 
+  background: var(--danger); 
+  width: 25px; 
+  height: 25px; 
+  padding: 0; 
+  font-size: 0.8rem; 
+  border-radius: 50%;
+}
+
+/* Summary */
+.total-amount { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 10px 0 0 0; }
+.high-spend { color: var(--danger); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content { grid-template-columns: 1fr; }
+}
