@@ -6,6 +6,10 @@ dynamic filtering, conditional rendering, and favourite movie management.
 
 This project fulfills all requirements from the React Essentials assignment.
 
+## Deployment
+
+- **Vercel** : [https://react-essentials-assignment-7t2r.vercel.app/](https://react-essentials-assignment-7t2r.vercel.app/)
+
 ## Features
 - Search movies using component state
 - Filter movies from local data
