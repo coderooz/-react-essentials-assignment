@@ -91,10 +91,10 @@ This project fulfills the following assignment criteria:
 ## ☁️ Deployment
 
 This project is deployed and live at:
-**[Insert Your Netlify/Vercel Link Here]**
+[https://grade-tracker-class.vercel.app/](https://grade-tracker-class.vercel.app/)
 
 ---
 
-**Author:** Ranit Saha (Coderooz)
-**Tech Stack:** React (Class Components), JavaScript (ES6), CSS3
+- **Author:** Ranit Saha (**[Coderooz](https://www.coderooz.in)**)
+- **Tech Stack:** React (**[Class Components](https://react.dev/reference/react/Component)**), JavaScript (ES6), CSS3
 

@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Task Manager Application 📝
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A functional Task Manager built with **React** that demonstrates advanced state management using the **Context API** and the **`useReducer`** hook. This application moves beyond simple local state, providing a centralized store for managing tasks across multiple components.
 
-## Available Scripts
+This project addresses the assignment requirements for "Global State Management in React."
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+-   **Global State Management**: Powered by `React.createContext` and `useReducer` to handle state logic outside of UI components.
+-   **CRUD Operations**:
+    -   **Create**: Add new tasks via the input field.
+    -   **Read**: View a dynamic list of tasks with a summary count.
+    -   **Update**: Edit existing task text inline and toggle completion status.
+    -   **Delete**: Remove individual tasks or clear all completed tasks.
+-   **Data Persistence**: Tasks are automatically saved to and loaded from the browser's `localStorage`.
+-   **Task Summary**: Real-time tracking of completed vs. total tasks.
+-   **Responsive Design**: A clean, mobile-friendly UI styled with modern CSS.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📂 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```text
+src/
+├── components/
+│   ├── TaskInput.js        # Form to dispatch ADD_TASK actions
+│   ├── TaskList.js         # Consumes Context to render the list
+│   ├── TaskItem.js         # Handles individual EDIT, DELETE, TOGGLE actions
+│   └── TaskSummary.js      # Displays stats and CLEAR_TASKS action
+├── context/
+│   └── TaskContext.js      # Contains Context, Provider, and Reducer logic
+├── App.js                  # Main Layout & Provider Wrapper
+├── App.css                 # Styling & Animations
+└── index.js                # Entry point
 
-### `npm test`
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Installation & Setup
 
-### `npm run build`
+1. **Clone the repository:**
+```bash
+git clone https://github.com/coderooz/-react-essentials-assignment.git
+cd react-essentials-assignment/task-manager
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies:**
+```bash
+npm install
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start the application:**
+```bash
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+4. Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view the app in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧠 How It Works (Context & Reducer)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This app avoids "prop drilling" by wrapping the application in a `TaskProvider`.
 
-### Code Splitting
+1. **The Store**: `initialState` loads data from LocalStorage or defaults to an empty array.
+2. **The Reducer**: The `taskReducer` function handles state transitions based on action types:
+* `ADD_TASK`
+* `DELETE_TASK`
+* `TOGGLE_TASK`
+* `EDIT_TASK`
+* `CLEAR_TASKS`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+3. **The Consumption**: Components use the custom hook `useTaskContext()` to access the `tasks` state and the `dispatch` function directly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📋 Assignment Checklist
 
-### Making a Progressive Web App
+* [x] **Context API Setup**: Created `TaskContext` to share state globally.
+* [x] **Reducer Logic**: Implemented complex state logic (switch-case) in a reducer function.
+* [x] **Component Separation**: Input, List, Item, and Summary are distinct components.
+* [x] **Feature: Edit**: Users can edit task text after creation.
+* [x] **Feature: Persistence**: Data survives page reloads (LocalStorage).
+* [x] **Styling**: Applied hover effects and "greyed-out" styling for completed tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📸 Screenshots
 
-### Advanced Configuration
+![Default Image](./images/Task%20Manager%201.png)
+![Add Tasks](./images/Task%20Manager%202%20-%20Add%20Tasks.png)
+![Edit Tasks](./images/Task%20Manager%203%20-%20Edit.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ☁️ Deployment
 
-### Deployment
+This project is ready for deployment on Vercel or Netlify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Live Demo:** [https://task-manager-roan-three.vercel.app/](https://task-manager-roan-three.vercel.app/)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Author:** Ranit Saha (**[Coderooz](https://www.coderooz.in)**)
+
+- **Tech Stack:** React 18, CSS3, LocalStorage API
+---
