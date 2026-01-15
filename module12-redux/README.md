@@ -3,7 +3,9 @@
 This project is a comprehensive application built with **React** and **Redux Toolkit**. It demonstrates advanced state management by handling user authentication flow, complex form validation, and a dynamic shopping cart system entirely through Redux slices.
 
 ## 🔗 Live Deployment
-*Add your Netlify/Vercel link here*
+
+- **Deployment Link** : [https://redux-pizza-app-blush.vercel.app/](https://redux-pizza-app-blush.vercel.app/)
+
 
 ## 🚀 Key Features
 

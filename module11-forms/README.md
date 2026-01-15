@@ -8,7 +8,7 @@ It consists of two distinct applications accessible via a tabbed interface:
 
 ## 🔗 Live Demo
 
-- **Deployment Link** : []()
+- **Deployment Link** : [https://marrio-pizza.vercel.app/](https://marrio-pizza.vercel.app/)
 
 ## 🚀 Features
 
