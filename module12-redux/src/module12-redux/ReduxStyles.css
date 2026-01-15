@@ -1,0 +1,102 @@
+.redux-app {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+.redux-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff4757;
+  padding: 1rem;
+  color: white;
+}
+
+.redux-nav button {
+  margin-left: 10px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card, .menu-container, .cart-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.toggle-btn {
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #2ed573;
+  color: white;
+  border-color: #2ed573;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.btn-danger {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  display: block;
+}
+
+.warning-box {
+  background: #ffeaa7;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}

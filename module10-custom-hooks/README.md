@@ -69,13 +69,13 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/coderooz/-react-essentials-assignment
+git clone https://github.com/coderooz/-react-essentials-assignment.git
 ```
 
 
 2. **Navigate to the project directory:**
 ```bash
-cd -react-essentials-assignment/react-expense-tracker
+cd -react-essentials-assignment/personal-expense-tracker
 ```
 
 
@@ -101,8 +101,9 @@ The app will open in your browser at `http://localhost:3000`.
 
 ## 🔗 Live Demo
 
-- **Deployment Link**: []()
+- **Deployment Link**: [https://personal-expense-tracker-ruby-eight.vercel.app/](https://personal-expense-tracker-ruby-eight.vercel.app/)
 
 ---
 
 - **Author** : Ranit Saha (**[Coderooz](https://www.coderooz.in)**)
+- **Contact** : _[Contact Me](https://www.coderooz.in/contact?subject=About%20project%20personal-expense-tracker&message=This%20is%20about%20the%20project%20"Personal%20Expense%20Tracker"%20under%20the%20repository%20"-react-essentials-assignement".)_
